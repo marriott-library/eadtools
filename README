@@ -1,0 +1,46 @@
+EAD Update Tool for CONTENTdm 6 Alan Witkowski (alan.witkowski@utah.edu)
+
+********* Installation *********
+1. Upload the EAD Tool code to a web accessible location on your contentdm 6
+server. (e.g. /usr/local/Content6/Website/public_html/eadtool)
+
+2. Rename config.template.php to config.php
+
+3. Edit config.php to match the settings for your contentdm server.
+
+4. Edit js/config.js for EAD configuration.
+
+********* Usage *********
+You must use a browser that supports HTML5 file drag-and-drop (tested with
+Firefox 10+ and Chrome 17+). Currently Opera 11 and IE9 don't support that.
+
+1. To load an XML file, drag the XML file from your file browser onto the
+webpage. You can also drag in multiple XML files for batch processing.
+
+2. The tool will attempt to look up the existing metadata based on the <unitid>
+value in the XML. If a match is found, the green status box near the top will
+notify you of the dmrecord # found.
+
+3. The first column will show you the field names. The second column will show
+you the data extracted from the EAD file. The third column (if an existing
+record was found) will show the current values. The third column will also show
+what has changed; additions are marked with green and deletions are marked with
+red.
+
+4. Currently the CONTENTdm catcher service doesn't support uploading
+images/files, so adding new records with this tool is disabled.
+
+5. Once you've reviewed the changes, click Submit Changes to upload them to the
+server.
+
+6. Upon success, you will be given a Transaction ID. All transaction IDs can be
+viewed in the transaction log in the CONTENTdm admin section. The server will
+also attempt to update the XML file on the server. This is done without the
+catcher service and the web user will need access to the files where CONTENTdm
+data is stored.
+
+7. At this point you can continue to drag in more XML files. Simply drag them
+anywhere on the webpage and they will be appended to the list.
+
+8. Once you're finished, the collection will need to be indexed to view the
+changes.

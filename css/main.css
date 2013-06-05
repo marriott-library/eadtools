@@ -1,0 +1,151 @@
+body {
+	font-family: arial;
+	font-size: 12pt;
+	margin: 0px;
+	background-color: #F3F3F3;
+}
+
+/* Submit buttons */
+input[type=button] {
+	margin: 0;
+}
+
+/* Console-style message system */
+#messages {
+	background-color: white;
+	border-top: solid 1px black;
+	width: 100%;
+	color: red;
+	position: fixed;
+	bottom: 0px
+}
+
+/* Each log message */
+#messages .message {
+	padding: 3px;
+}
+
+/* Remove icon */
+#messages img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+/* Main container */
+#body {
+	margin: 5px 0px 0px 5px;
+	visibility: hidden;
+}
+
+/* Collection-to-edit dropdown */
+#collections {
+	margin-top: 5px;
+}
+
+/* Invisible dropbox that takes up the entire screen */
+#dropbox {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -50;
+	opacity: 0.5;
+	text-align: center
+}
+
+/* Initial message */
+#dropbox h1 {
+	font-size: 250%;
+}
+
+/* Container for all upload boxes */
+#uploads {
+}
+
+/* Individual upload box */
+.upload {
+	border: solid 1px black;
+	padding: 5px;
+	margin: 10px 10px 10px 0px;
+	background-color: #FFFFFF;
+	box-shadow: 5px 5px 3px #888;
+}
+
+/* Table that contains all fields and data */
+.upload table {
+	border-spacing: 0px;
+	margin-top: 5px;
+}
+
+/* Shows info about the file */
+.upload .header {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+/* Box that shows status messages */
+.upload .status {
+	margin-bottom: 5px;
+	padding: 5px;
+	white-space: pre;
+	font-family: monospace;
+	background-color: #EFEFEF;
+}
+
+/* Good status */
+.upload .status.green {
+	background-color: #CCFFCC;
+}
+
+/* Warning status */
+.upload .status.yellow {
+	background-color: #FFFFCC;
+}
+
+/* Error status */
+.upload .status.red {
+	background-color: #FFCCCC;
+}
+
+/* Field row */
+.upload tr {
+}
+
+/* Header row */
+.upload th {
+	text-align: left;
+}
+
+/* All table cells */
+.upload td {
+	padding: 5px 5px 0px 0px;
+	vertical-align: top;
+	border-top: solid 1px #DFDFDF;
+}
+
+/* Field name cell */
+.upload .label {
+}
+
+/* Cell for data extracted from XML file */
+.upload .ead {
+	max-height: 150px;
+	overflow: auto;
+}
+
+/* Cell for data from existing metadata */
+.upload .existing {
+	max-height: 150px;
+	overflow: auto;
+}
+
+/* Background for diff tool when inserts are shown */
+ins {
+	background: #E6FFE6;
+}
+
+/* Background for diff tool when deletes are shown */
+del {
+	background: #FFE6E6;
+}
